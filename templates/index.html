@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cattle Disease Prediction</title>
+</head>
+<body>
+    <h1>Cattle Disease Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="cattle_id">Cattle ID/Name:</label>
+        <input type="text" id="cattle_id" name="cattle_id" required><br><br>
+
+        <label for="symptom1">Symptom 1:</label>
+        <select id="symptom1" name="symptom1">
+            <option>Select Here</option>
+            {% for symptom in symptoms %}
+                <option>{{ symptom }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="symptom2">Symptom 2:</label>
+        <select id="symptom2" name="symptom2">
+            <option>Select Here</option>
+            {% for symptom in symptoms %}
+                <option>{{ symptom }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="symptom3">Symptom 3:</label>
+        <select id="symptom3" name="symptom3">
+            <option>Select Here</option>
+            {% for symptom in symptoms %}
+                <option>{{ symptom }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="symptom4">Symptom 4:</label>
+        <select id="symptom4" name="symptom4">
+            <option>Select Here</option>
+            {% for symptom in symptoms %}
+                <option>{{ symptom }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="symptom5">Symptom 5:</label>
+        <select id="symptom5" name="symptom5">
+            <option>Select Here</option>
+            {% for symptom in symptoms %}
+                <option>{{ symptom }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Predict Disease</button>
+    </form>
+</body>
+</html>
